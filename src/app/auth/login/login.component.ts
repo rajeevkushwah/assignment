@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
      //console.log(data)
         
         if(data.count>0){
-         let user = data.results.filter(item => item.birth_year == this.user.password);
+         let user = data.results.filter(item => item.birth_year == this.user.password  && item.name == this.user.username.trim() );
          console.log("user===>",user)
          if(user.length>0){
            localStorage.setItem('UserInfo', JSON.stringify(user[0]));
