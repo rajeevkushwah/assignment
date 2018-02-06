@@ -1,0 +1,43 @@
+
+       
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                  
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                       <!--  <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="active">Dashboard 1</li>
+                        </ol> -->
+                         <form class="form-group" role="search">
+                                <div class="input-group">
+                                    <input type="text" id="example-input1-group2" class="form-control" placeholder="Search Planets" name="string" id="string" [(ngModel)]="searchStr" #string="ngModel"  required (keyup)="onKey($event)">
+                                    <span class="input-group-btn"><button type="button" class="btn waves-effect waves-light btn-info" ><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </form>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+               <div class="row">
+                <div [ngBusy]="busy"></div>
+                    <div class="col-lg-3 col-md-6" *ngFor="let planet of result;let i=index"> 
+                        <div class="white-box" [ngStyle]="{'height': 8*setFont(i,result.length) + 'px'}" >
+                            <div class="text-muted" [ngStyle]="{'font-size': setFont(i,result.length) + 'px'}"><span class="m-r-10">Population {{planet.population}}</span> </div>
+                            <h3 class="m-t-20 m-b-20 h1" [ngStyle]="{'font-size': setFont(i,result.length) + 'px'}">{{planet.name}}</h3>
+                           <!--  <p >{{planet.name}}</p> -->
+                            <!-- <button class="btn btn-success btn-rounded waves-effect waves-light m-t-20">Read more</button> -->
+                        </div>
+                    </div>
+                </div>
+              
+
+               <button type="submit" class="btn btn-inverse  waves-effect waves-light" *ngIf="result.length>0" (click)="more()" [ngClass]="{'disabled': previous==null }">Previous</button>
+               <button type="submit" class="btn btn-inverse waves-effect waves-light"   *ngIf="result.length>0" (click)="more()" [ngClass]="{'disabled': next==null }" >Next</button>
+              
+                <!-- /.right-sidebar -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2017 &copy; Elite Admin brought to you by themedesigner.in </footer>
+        </div>
+    

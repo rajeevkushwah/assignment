@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "dreamApp"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "assets/bootstrap/dist/css/bootstrap.min.css",
+        "assets/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css",
+        "assets/css/animate.css",
+        "assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css",
+        "assets/css/style.css",
+        "assets/css/colors/blue-dark.css",
+        "../node_modules/ngx-toastr/toastr.css",
+        "../node_modules/angular2-busy/build/style/busy.css"
+       
+      ],
+      "scripts": [
+        "assets/plugins/bower_components/jquery/dist/jquery.min.js",
+        "assets/bootstrap/dist/js/tether.min.js",
+        "assets/bootstrap/dist/js/bootstrap.min.js",
+        "assets/bootstrap/dist/js/bootstrap-table.min.js",
+        "assets/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js",
+        "assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js",
+        "assets/js/jquery.slimscroll.js",
+        "assets/js/waves.js",
+        "assets/js/custom.min.js",
+        "assets/js/jasny-bootstrap.js",
+        "assets/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"
+        
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

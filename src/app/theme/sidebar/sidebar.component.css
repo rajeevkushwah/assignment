@@ -1,0 +1,16 @@
+@media(max-width:1100px)
+{
+.left-nav-custom{margin-top: 22px;}
+}
+
+.disabledClass{
+  background: #5d5d5d;
+  color: #9F9F9F !important;
+  cursor: not-allowed;
+}
+.disabledClass:hover {
+  background: #5d5d5d;
+}
+.disabledClass:active {
+  background: #5d5d5d;
+}
